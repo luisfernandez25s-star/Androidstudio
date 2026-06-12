@@ -5,16 +5,12 @@ plugins {
 
 android {
     namespace = "com.example.aplicacionmovil"
-    compileSdk {
-        version = release(36) {
-            minorApiLevel = 1
-        }
-    }
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.example.aplicacionmovil"
         minSdk = 31
-        targetSdk = 31
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -34,6 +30,9 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+    kotlinOptions {
+        jvmTarget = "11"
+    }
 }
 
 dependencies {
@@ -44,10 +43,7 @@ dependencies {
     implementation(libs.material)
     implementation(libs.play.services.wearable)
     implementation(libs.okhttp)
-<<<<<<< HEAD
-=======
     implementation(libs.gson)
->>>>>>> 6edfc7c (Mejoramiento en vistas y funcionamiento)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

@@ -19,6 +19,8 @@ wearToolingPreview = "1.0.0"
 activityCompose = "1.13.0"
 coreSplashscreen = "1.2.0"
 recyclerview = "1.4.0"
+okhttp = "4.12.0"
+gson = "2.10.1"
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
@@ -45,6 +47,10 @@ androidx-activity-compose = { group = "androidx.activity", name = "activity-comp
 androidx-core-splashscreen = { group = "androidx.core", name = "core-splashscreen", version.ref = "coreSplashscreen" }
 androidx-recyclerview = { group = "androidx.recyclerview", name = "recyclerview", version.ref = "recyclerview" }
 okhttp = { group = "com.squareup.okhttp3", name = "okhttp", version.ref = "okhttp" }
+<<<<<<< HEAD
+=======
+gson = { group = "com.google.code.gson", name = "gson", version.ref = "gson" }
+>>>>>>> 6edfc7c (Mejoramiento en vistas y funcionamiento)
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }

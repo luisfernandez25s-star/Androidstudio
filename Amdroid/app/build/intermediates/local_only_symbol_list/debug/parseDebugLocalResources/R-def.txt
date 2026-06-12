@@ -1,0 +1,25 @@
+R_DEF: Internal format may change without notice
+local
+color black
+color racing_black
+color racing_dark_grey
+color racing_yellow
+color white
+drawable btn_chivo
+drawable ic_launcher_background
+drawable ic_launcher_foreground
+drawable logo
+id btnChat
+id btnSend
+id editMessage
+id txtChat
+layout activity_chat
+layout activity_main
+mipmap ic_launcher
+mipmap ic_launcher_round
+raw sonido
+string app_name
+style Base.Theme.AplicacionMovil
+style Theme.AplicacionMovil
+xml backup_rules
+xml data_extraction_rules

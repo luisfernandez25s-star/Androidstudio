@@ -1,0 +1,216 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.aplicacionmovil"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+7-->INJECTED
+8        android:minSdkVersion="32"
+8-->INJECTED
+9        android:targetSdkVersion="36" />
+9-->INJECTED
+10
+11    <!-- Permisos -->
+12    <uses-permission android:name="android.permission.WAKE_LOCK" />
+12-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:5:5-68
+12-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:5:22-65
+13    <uses-permission android:name="android.permission.INTERNET" />
+13-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:6:5-67
+13-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:6:22-64
+14    <uses-permission android:name="android.permission.VIBRATE" />
+14-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:7:5-66
+14-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:7:22-63
+15
+16    <!-- Wear OS -->
+17    <uses-feature android:name="android.hardware.type.watch" />
+17-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:10:5-64
+17-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:10:19-61
+18
+19    <permission
+19-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:22:5-24:47
+20        android:name="com.example.aplicacionmovil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+20-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:23:9-81
+21        android:protectionLevel="signature" />
+21-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:24:9-44
+22
+23    <uses-permission android:name="com.example.aplicacionmovil.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+23-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:26:5-97
+23-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:26:22-94
+24
+25    <application
+25-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:12:5-57:19
+26        android:allowBackup="true"
+26-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:13:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.18.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\1b14c9f2fd70152852e7111a83ef94af\transformed\core-1.18.0\AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+29-->INJECTED
+30        android:icon="@mipmap/ic_launcher"
+30-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:14:9-43
+31        android:label="@string/app_name"
+31-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:15:9-41
+32        android:supportsRtl="true"
+32-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:16:9-35
+33        android:testOnly="true"
+34        android:theme="@android:style/Theme.DeviceDefault" >
+34-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:17:9-59
+35
+36        <!-- Librerías Wear -->
+37        <uses-library
+37-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:20:9-22:39
+38            android:name="com.google.android.wearable"
+38-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:21:13-55
+39            android:required="true" />
+39-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:22:13-36
+40        <uses-library
+40-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:24:9-26:40
+41            android:name="wear-sdk"
+41-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:25:13-36
+42            android:required="false" />
+42-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:26:13-37
+43
+44        <!-- App standalone -->
+45        <meta-data
+45-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:29:9-31:36
+46            android:name="com.google.android.wearable.standalone"
+46-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:30:13-66
+47            android:value="true" />
+47-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:31:13-33
+48
+49        <!-- NUEVA PANTALLA -->
+50        <activity
+50-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:34:9-36:38
+51            android:name="com.example.aplicacionmovil.presentation.Prueba"
+51-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:35:13-48
+52            android:exported="true" />
+52-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:36:13-36
+53        <activity
+53-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:38:9-40:38
+54            android:name="com.example.aplicacionmovil.presentation.ChatActivity"
+54-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:39:13-54
+55            android:exported="true" />
+55-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:40:13-36
+56
+57        <!-- Pantalla principal -->
+58        <activity
+58-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:43:9-55:20
+59            android:name="com.example.aplicacionmovil.presentation.MainActivity"
+59-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:44:13-54
+60            android:exported="true"
+60-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:45:13-36
+61            android:taskAffinity=""
+61-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:46:13-36
+62            android:theme="@style/MainActivityTheme.Starting" >
+62-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:47:13-62
+63            <intent-filter>
+63-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:49:13-53:29
+64                <action android:name="android.intent.action.MAIN" />
+64-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:50:17-69
+64-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:50:25-66
+65
+66                <category android:name="android.intent.category.LAUNCHER" />
+66-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:52:17-77
+66-->C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\AndroidManifest.xml:52:27-74
+67            </intent-filter>
+68        </activity>
+69        <activity
+69-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\ca56160dc775508a51ea2538f25c562b\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+70            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+70-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\ca56160dc775508a51ea2538f25c562b\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+71            android:exported="false"
+71-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\ca56160dc775508a51ea2538f25c562b\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+72            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+72-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\ca56160dc775508a51ea2538f25c562b\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+73
+74        <meta-data
+74-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\f3127370731661274b345ac66a2a0ce3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+75            android:name="com.google.android.gms.version"
+75-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\f3127370731661274b345ac66a2a0ce3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+76            android:value="@integer/google_play_services_version" />
+76-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\f3127370731661274b345ac66a2a0ce3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+77
+78        <activity
+78-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e7f1eea136e402c3a524ba978eb571ac\transformed\ui-tooling\AndroidManifest.xml:23:9-25:39
+79            android:name="androidx.compose.ui.tooling.PreviewActivity"
+79-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e7f1eea136e402c3a524ba978eb571ac\transformed\ui-tooling\AndroidManifest.xml:24:13-71
+80            android:exported="true" />
+80-->[androidx.compose.ui:ui-tooling-android:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e7f1eea136e402c3a524ba978eb571ac\transformed\ui-tooling\AndroidManifest.xml:25:13-36
+81        <activity
+81-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\0e2f5dab138571a594d28279c36c2b72\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:23:9-26:79
+82            android:name="androidx.activity.ComponentActivity"
+82-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\0e2f5dab138571a594d28279c36c2b72\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:24:13-63
+83            android:exported="true"
+83-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\0e2f5dab138571a594d28279c36c2b72\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:25:13-36
+84            android:theme="@android:style/Theme.Material.Light.NoActionBar" />
+84-->[androidx.compose.ui:ui-test-manifest:1.9.2] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\0e2f5dab138571a594d28279c36c2b72\transformed\ui-test-manifest-1.9.2\AndroidManifest.xml:26:13-76
+85
+86        <provider
+86-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:24:9-32:20
+87            android:name="androidx.startup.InitializationProvider"
+87-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:25:13-67
+88            android:authorities="com.example.aplicacionmovil.androidx-startup"
+88-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:26:13-68
+89            android:exported="false" >
+89-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:27:13-37
+90            <meta-data
+90-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:29:13-31:52
+91                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+91-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:30:17-75
+92                android:value="androidx.startup" />
+92-->[androidx.emoji2:emoji2:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\a3d8fea41d714863e9f24bed59ca2ffa\transformed\emoji2-1.4.0\AndroidManifest.xml:31:17-49
+93            <meta-data
+93-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\b2f69616714f0199b804ee8054162ddc\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:29:13-31:52
+94                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+94-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\b2f69616714f0199b804ee8054162ddc\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:30:17-78
+95                android:value="androidx.startup" />
+95-->[androidx.lifecycle:lifecycle-process:2.9.4] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\b2f69616714f0199b804ee8054162ddc\transformed\lifecycle-process-2.9.4\AndroidManifest.xml:31:17-49
+96            <meta-data
+96-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:29:13-31:52
+97                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+97-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:30:17-85
+98                android:value="androidx.startup" />
+98-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:31:17-49
+99        </provider>
+100
+101        <receiver
+101-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:34:9-52:20
+102            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+102-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:35:13-76
+103            android:directBootAware="false"
+103-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:36:13-44
+104            android:enabled="true"
+104-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:37:13-35
+105            android:exported="true"
+105-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:38:13-36
+106            android:permission="android.permission.DUMP" >
+106-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:39:13-57
+107            <intent-filter>
+107-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:40:13-42:29
+108                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:17-91
+108-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:41:25-88
+109            </intent-filter>
+110            <intent-filter>
+110-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:43:13-45:29
+111                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:17-85
+111-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:44:25-82
+112            </intent-filter>
+113            <intent-filter>
+113-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:46:13-48:29
+114                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:17-88
+114-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:47:25-85
+115            </intent-filter>
+116            <intent-filter>
+116-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:49:13-51:29
+117                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:17-95
+117-->[androidx.profileinstaller:profileinstaller:1.4.0] C:\Users\fluis_nuf\.gradle\caches\9.4.1\transforms\e2e7b21a0ac7c22f2835a553d77eecc9\transformed\profileinstaller-1.4.0\AndroidManifest.xml:50:25-92
+118            </intent-filter>
+119        </receiver>
+120    </application>
+121
+122</manifest>

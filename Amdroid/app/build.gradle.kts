@@ -44,6 +44,10 @@ dependencies {
     implementation(libs.material)
     implementation(libs.play.services.wearable)
     implementation(libs.okhttp)
+<<<<<<< HEAD
+=======
+    implementation(libs.gson)
+>>>>>>> 6edfc7c (Mejoramiento en vistas y funcionamiento)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.espresso.core)
     androidTestImplementation(libs.androidx.junit)

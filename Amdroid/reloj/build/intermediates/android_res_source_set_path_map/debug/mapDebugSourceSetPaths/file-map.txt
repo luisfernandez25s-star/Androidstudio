@@ -1,0 +1,8 @@
+com.example.aplicacionmovil.reloj-pngs-0 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\build\generated\res\pngs\debug
+com.example.aplicacionmovil.reloj-updated_navigation_xml-1 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\build\generated\updated_navigation_xml\debug
+com.example.aplicacionmovil.reloj-packageDebugResources-2 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\build\intermediates\incremental\debug\packageDebugResources\merged.dir
+com.example.aplicacionmovil.reloj-packageDebugResources-3 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\build\intermediates\incremental\debug\packageDebugResources\stripped.dir
+com.example.aplicacionmovil.reloj-debug-4 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\build\intermediates\merged_res\debug\mergeDebugResources
+com.example.aplicacionmovil.reloj-debug-5 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\debug\res
+com.example.aplicacionmovil.reloj-main-6 C:\Users\fluis_nuf\AndroidStudioProjects\Androidstudio\Amdroid\reloj\src\main\res
+gradleHome-0 C:\Users\fluis_nuf\.gradle

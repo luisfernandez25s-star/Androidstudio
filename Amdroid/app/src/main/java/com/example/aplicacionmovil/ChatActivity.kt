@@ -4,37 +4,31 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
-import android.widget.ScrollView
 import android.widget.TextView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.google.android.gms.wearable.MessageClient
-import com.google.android.gms.wearable.MessageEvent
-import com.google.android.gms.wearable.Wearable
-import okhttp3.Call
-import okhttp3.Callback
+import com.google.android.gms.tasks.Tasks
+import com.google.android.gms.wearable.*
+import com.google.gson.Gson
+import okhttp3.*
 import okhttp3.MediaType.Companion.toMediaType
-import okhttp3.OkHttpClient
-import okhttp3.Request
 import okhttp3.RequestBody.Companion.toRequestBody
-import okhttp3.Response
 import java.io.IOException
-import java.text.SimpleDateFormat
-import java.util.Date
-import java.util.Locale
+import kotlin.concurrent.thread
 
 class ChatActivity : AppCompatActivity(), MessageClient.OnMessageReceivedListener {
 
     private lateinit var txtChat: TextView
     private lateinit var editMessage: EditText
     private lateinit var btnSend: Button
-    private lateinit var btnSave: Button
-    private lateinit var btnShow: Button
-    private lateinit var scrollChat: ScrollView
-
-    private val pathChat = "/chat"
-    private val apiGuardar = "https://appmovil-2gf6.onrender.com/guardar"
+    private lateinit var btnSaveMongo: Button
+    private lateinit var btnShowMongo: Button
+    
     private val client = OkHttpClient()
-    private var lastMessage = ""
+    private val JSON_TYPE = "application/json; charset=utf-8".toMediaType()
+    
+    // URL DE RENDER ACTUALIZADA
+    private val API_URL = "https://chat-reloj-backend.onrender.com" 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -43,148 +37,103 @@ class ChatActivity : AppCompatActivity(), MessageClient.OnMessageReceivedListene
         txtChat = findViewById(R.id.txtChat)
         editMessage = findViewById(R.id.editMessage)
         btnSend = findViewById(R.id.btnSend)
-        btnSave = findViewById(R.id.btnSave)
-        btnShow = findViewById(R.id.btnShow)
-        scrollChat = findViewById(R.id.scrollChat)
+        btnSaveMongo = findViewById(R.id.btnSaveMongo)
+        btnShowMongo = findViewById(R.id.btnShowMongo)
 
+        // Escuchar mensajes del reloj mediante MessageClient
+        Wearable.getMessageClient(this).addListener(this)
+
+        // Botón ENVIAR: Manda mensaje al reloj
         btnSend.setOnClickListener {
             val msg = editMessage.text.toString().trim()
             if (msg.isNotEmpty()) {
-                lastMessage = msg
-                appendChat("Celular: $msg")
-                sendToWatch(msg)
+                sendMessageToWatch(msg)
+                txtChat.append("\nTú: $msg")
                 editMessage.text.clear()
             }
         }
 
-        btnSave.setOnClickListener {
-            val msg = if (editMessage.text.toString().trim().isNotEmpty()) {
-                editMessage.text.toString().trim()
-            } else {
-                lastMessage
-            }
-
-            if (msg.isNotEmpty()) {
-                guardarEnBaseDeDatos(msg)
-            } else {
-                appendChat("Sistema: escribe o recibe un mensaje antes de guardar")
-            }
-        }
-
-        btnShow.setOnClickListener {
+        // Botón AGREGAR A BASE DE DATOS: Envía a MongoDB vía API
+        btnSaveMongo.setOnClickListener {
             val msg = editMessage.text.toString().trim()
             if (msg.isNotEmpty()) {
-                lastMessage = msg
-                appendChat("Vista: $msg")
-                editMessage.text.clear()
-            } else if (lastMessage.isNotEmpty()) {
-                appendChat("Último mensaje: $lastMessage")
+                postToMongo("Luis", msg)
             } else {
-                appendChat("Sistema: no hay mensaje para mostrar")
+                Toast.makeText(this, "Escribe algo en el chat para guardar", Toast.LENGTH_SHORT).show()
             }
+        }
+
+        // Botón MOSTRAR LO GUARDADO: Obtiene datos de MongoDB
+        btnShowMongo.setOnClickListener {
+            getFromMongo()
         }
     }
 
-    private fun sendToWatch(message: String) {
-        Wearable.getNodeClient(this).connectedNodes
-            .addOnSuccessListener { nodes ->
+    private fun sendMessageToWatch(message: String) {
+        thread {
+            try {
+                val nodes = Tasks.await(Wearable.getNodeClient(this).connectedNodes)
                 if (nodes.isEmpty()) {
-                    appendChat("Sistema: no hay reloj conectado")
-                    return@addOnSuccessListener
+                    runOnUiThread { Toast.makeText(this, "No hay reloj conectado", Toast.LENGTH_SHORT).show() }
                 }
-
-                nodes.forEach { node ->
-                    Wearable.getMessageClient(this)
-                        .sendMessage(node.id, pathChat, message.toByteArray(Charsets.UTF_8))
-                        .addOnSuccessListener {
-                            Log.d("ChatMobile", "Mensaje enviado a ${node.displayName}: $message")
-                        }
-                        .addOnFailureListener { e ->
-                            appendChat("Error enviando al reloj: ${e.message}")
-                        }
+                for (node in nodes) {
+                    Wearable.getMessageClient(this).sendMessage(node.id, "/chat", message.toByteArray())
                 }
-            }
-            .addOnFailureListener { e ->
-                appendChat("Error buscando reloj: ${e.message}")
-            }
-    }
-
-    override fun onMessageReceived(event: MessageEvent) {
-        if (event.path == pathChat) {
-            val msg = String(event.data, Charsets.UTF_8)
-            lastMessage = msg
-            runOnUiThread {
-                appendChat("Reloj: $msg")
+            } catch (e: Exception) {
+                Log.e("ChatDebug", "Error enviando al reloj", e)
             }
         }
     }
 
-    private fun guardarEnBaseDeDatos(message: String) {
-        val fecha = SimpleDateFormat("yyyy-MM-dd HH:mm:ss", Locale.getDefault()).format(Date())
-        val json = """
-            {
-              "usuario": "Celular",
-              "mensaje": "${escapeJson(message)}",
-              "fecha": "$fecha"
+    override fun onMessageReceived(messageEvent: MessageEvent) {
+        if (messageEvent.path == "/chat") {
+            val msg = String(messageEvent.data)
+            runOnUiThread {
+                txtChat.append("\nReloj: $msg")
             }
-        """.trimIndent()
-
-        post(apiGuardar, json)
+        }
     }
 
-    private fun get(url: String) {
-        val request = Request.Builder().url(url).get().build()
-        client.newCall(request).enqueue(object : Callback {
-            override fun onFailure(call: Call, e: IOException) {
-                runOnUiThread { appendChat("GET error: ${e.message}") }
-            }
-
-            override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string().orEmpty()
-                runOnUiThread { appendChat("GET respuesta: $body") }
-            }
-        })
-    }
-
-    private fun post(url: String, jsonBody: String) {
-        val mediaType = "application/json; charset=utf-8".toMediaType()
-        val requestBody = jsonBody.toRequestBody(mediaType)
-        val request = Request.Builder().url(url).post(requestBody).build()
+    private fun postToMongo(usuario: String, mensaje: String) {
+        val json = Gson().toJson(mapOf(
+            "usuario" to usuario,
+            "mensaje" to mensaje,
+            "fecha" to System.currentTimeMillis().toString()
+        ))
+        val body = json.toRequestBody(JSON_TYPE)
+        val request = Request.Builder().url("$API_URL/guardar").post(body).build()
 
         client.newCall(request).enqueue(object : Callback {
             override fun onFailure(call: Call, e: IOException) {
-                runOnUiThread { appendChat("Error al guardar: ${e.message}") }
+                runOnUiThread { Toast.makeText(applicationContext, "Error de red: ${e.message}", Toast.LENGTH_SHORT).show() }
             }
-
             override fun onResponse(call: Call, response: Response) {
-                val body = response.body?.string().orEmpty()
-                runOnUiThread {
-                    if (response.isSuccessful) {
-                        appendChat("Guardado en MongoDB: $body")
-                    } else {
-                        appendChat("Servidor respondió ${response.code}: $body")
-                    }
+                if (response.isSuccessful) {
+                    runOnUiThread { Toast.makeText(applicationContext, "¡Mensaje guardado en MongoDB!", Toast.LENGTH_SHORT).show() }
+                } else {
+                    runOnUiThread { Toast.makeText(applicationContext, "Error del servidor: ${response.code}", Toast.LENGTH_SHORT).show() }
                 }
             }
         })
     }
 
-    private fun appendChat(text: String) {
-        txtChat.append("\n$text")
-        scrollChat.post { scrollChat.fullScroll(ScrollView.FOCUS_DOWN) }
+    private fun getFromMongo() {
+        val request = Request.Builder().url("$API_URL/mensajes").build()
+        client.newCall(request).enqueue(object : Callback {
+            override fun onFailure(call: Call, e: IOException) {
+                runOnUiThread { Toast.makeText(applicationContext, "Error al obtener datos", Toast.LENGTH_SHORT).show() }
+            }
+            override fun onResponse(call: Call, response: Response) {
+                val responseData = response.body?.string()
+                runOnUiThread {
+                    txtChat.append("\n[BD Mongo]: $responseData")
+                }
+            }
+        })
     }
 
-    private fun escapeJson(text: String): String {
-        return text.replace("\\", "\\\\").replace("\"", "\\\"")
-    }
-
-    override fun onResume() {
-        super.onResume()
-        Wearable.getMessageClient(this).addListener(this)
-    }
-
-    override fun onPause() {
-        super.onPause()
+    override fun onDestroy() {
+        super.onDestroy()
         Wearable.getMessageClient(this).removeListener(this)
     }
 }

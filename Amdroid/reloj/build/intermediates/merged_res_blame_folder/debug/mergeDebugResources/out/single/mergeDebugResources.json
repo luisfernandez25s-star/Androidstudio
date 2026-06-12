@@ -1,0 +1,90 @@
+[
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/drawable_splash_icon.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/drawable/splash_icon.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-anydpi_ic_launcher_round.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-anydpi/ic_launcher_round.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/layout_activity_main.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/layout_activity_chat_reloj.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/layout/activity_chat_reloj.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-hdpi_ic_launcher.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-hdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/layout_splash_screen.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/layout/splash_screen.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/drawable_ic_launcher_foreground.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/drawable/ic_launcher_foreground.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-anydpi_ic_launcher.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-anydpi/ic_launcher.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/layout_prueba.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/layout/prueba.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xxxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xxxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/drawable_logo.png.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/drawable/logo.png"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-mdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-mdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xxxhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xxxhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/raw_sonido.mp3.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/raw/sonido.mp3"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-mdpi_ic_launcher.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-mdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xxhdpi_ic_launcher.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xxhdpi/ic_launcher.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-hdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-hdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/mipmap-xhdpi_ic_launcher_round.webp.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/mipmap-xhdpi/ic_launcher_round.webp"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/drawable_ic_launcher_background.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/drawable/ic_launcher_background.xml"
+    },
+    {
+        "merged": "com.example.aplicacionmovil.reloj-debug-52:/drawable_btn_chivo_reloj.xml.flat",
+        "source": "com.example.aplicacionmovil.reloj-main-54:/drawable/btn_chivo_reloj.xml"
+    }
+]

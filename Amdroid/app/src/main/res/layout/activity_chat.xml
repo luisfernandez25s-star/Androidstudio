@@ -35,6 +35,7 @@
         android:id="@+id/editMessage"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+<<<<<<< HEAD
         android:hint="Escribe un mensaje"
         android:textColor="@color/white"
         android:textColorHint="#999999"
@@ -55,6 +56,52 @@
         android:text="Guardar en Base de Datos"
         android:backgroundTint="#00C853"
         android:textColor="@color/white" />
+=======
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Escribe un mensaje"
+                android:textColor="@color/white"
+                android:textColorHint="#999999"
+                android:backgroundTint="@color/racing_yellow"/>
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR"
+                android:backgroundTint="@color/racing_yellow"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveMongo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="AGREGAR A BASE DE DATOS"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/btnShowMongo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOSTRAR LO GUARDADO"
+            android:backgroundTint="@color/racing_yellow"
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"/>
+    </LinearLayout>
+>>>>>>> 6edfc7c (Mejoramiento en vistas y funcionamiento)
 
     <Button
         android:id="@+id/btnShow"

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="racing_yellow">#FFCC00</color>
+    <color name="racing_black">#000000</color>
+    <color name="racing_white">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="racing_dark_grey">#1A1A1A</color>
+
+    <!-- Aliases for existing code -->
+    <color name="primary_wear">@color/racing_yellow</color>
+    <color name="bg_wear">@color/racing_black</color>
+    <color name="text_wear">@color/racing_white</color>
+    <color name="subtext_wear">@color/racing_yellow</color>
+</resources>

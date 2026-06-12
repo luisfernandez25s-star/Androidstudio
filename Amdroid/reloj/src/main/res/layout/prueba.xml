@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/racing_black"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/txtRepro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="REPRODUCIR"
+        android:textColor="@color/racing_yellow"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/botonAudio"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <Button
+        android:id="@+id/botonAudio"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="AUDIO"
+        android:textSize="10sp"
+        android:backgroundTint="@color/racing_yellow"
+        android:textColor="@color/racing_black"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintTop_toBottomOf="@id/txtRepro"
+        app:layout_constraintBottom_toTopOf="@+id/btnChat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/btnChat"
+        android:layout_width="110dp"
+        android:layout_height="35dp"
+        android:text="CHAT"
+        android:textSize="10sp"
+        android:backgroundTint="@color/racing_yellow"
+        android:textColor="@color/racing_black"
+        android:textStyle="bold"
+        android:padding="0dp"
+        app:layout_constraintTop_toBottomOf="@id/botonAudio"
+        app:layout_constraintBottom_toTopOf="@+id/volver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/volver"
+        android:layout_width="80dp"
+        android:layout_height="30dp"
+        android:text="VOLVER"
+        android:textSize="8sp"
+        android:backgroundTint="@color/racing_dark_grey"
+        android:textColor="@color/racing_white"
+        android:padding="0dp"
+        app:layout_constraintTop_toBottomOf="@id/btnChat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

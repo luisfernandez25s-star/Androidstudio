@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
@@ -10,17 +9,18 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chat con Reloj"
+        android:text="Chat Celular ↔ Reloj"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="@color/racing_yellow"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="12dp" />
 
     <ScrollView
+        android:id="@+id/scrollChat"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
-        android:layout_marginBottom="16dp">
+        android:layout_marginBottom="12dp">
 
         <TextView
             android:id="@+id/txtChat"
@@ -28,31 +28,62 @@
             android:layout_height="wrap_content"
             android:textColor="@color/white"
             android:textSize="16sp"
-            android:text="Bienvenido al chat..."/>
+            android:text="Bienvenido al chat..." />
     </ScrollView>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editMessage"
-            android:layout_width="0dp"
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:hint="Escribe un mensaje"
-            android:textColor="@color/white"
-            android:textColorHint="#999999"
-            android:backgroundTint="@color/racing_yellow"/>
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/editMessage"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Escribe un mensaje"
+                android:textColor="@color/white"
+                android:textColorHint="#999999"
+                android:backgroundTint="@color/racing_yellow"/>
+
+            <Button
+                android:id="@+id/btnSend"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ENVIAR"
+                android:backgroundTint="@color/racing_yellow"
+                android:textColor="@color/black"/>
+        </LinearLayout>
 
         <Button
-            android:id="@+id/btnSend"
-            android:layout_width="wrap_content"
+            android:id="@+id/btnSaveMongo"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ENVIAR"
+            android:text="AGREGAR A BASE DE DATOS"
+            android:backgroundTint="#4CAF50"
+            android:textColor="@color/white"
+            android:layout_marginTop="4dp"/>
+
+        <Button
+            android:id="@+id/btnShowMongo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MOSTRAR LO GUARDADO"
             android:backgroundTint="@color/racing_yellow"
-            android:textColor="@color/black"/>
+            android:textColor="@color/black"
+            android:layout_marginTop="4dp"/>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btnShow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Mostrar en la vista del chat"
+        android:backgroundTint="#2196F3"
+        android:textColor="@color/white" />
 </LinearLayout>

@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "com.example.aplicacionmovil.app-mergeDebugResources-34:/values-v22/values-v22.xml",
+            "outputFile": "com.example.aplicacionmovil.app-mergeDebugResources-35:/values-v22/values-v22.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\fluis_nuf\\.gradle\\caches\\9.4.1\\transforms\\189036662af382f55ac85b6f1bce4ac4\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
+                    "source": "C:\\Users\\fluis_nuf\\.gradle\\caches\\9.4.1\\transforms\\100e030d362e48547161abbdb1976046\\transformed\\appcompat-1.6.1\\res\\values-v22\\values-v22.xml",
                     "from": {
                         "startLines": "2,3,4,9",
                         "startColumns": "4,4,4,4",

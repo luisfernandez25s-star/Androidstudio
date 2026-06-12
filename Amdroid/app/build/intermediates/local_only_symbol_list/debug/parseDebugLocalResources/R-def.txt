@@ -10,8 +10,12 @@ drawable ic_launcher_background
 drawable ic_launcher_foreground
 drawable logo
 id btnChat
+id btnSaveMongo
 id btnSend
+id btnShow
+id btnShowMongo
 id editMessage
+id scrollChat
 id txtChat
 layout activity_chat
 layout activity_main

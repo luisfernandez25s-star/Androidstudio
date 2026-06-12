@@ -22,6 +22,7 @@ id btnSend
 id editMessage
 id mainLogo
 id mainTitle
+id scrollChat
 id txtChat
 id txtRepro
 id volver

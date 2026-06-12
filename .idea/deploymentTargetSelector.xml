@@ -4,7 +4,7 @@
     <selectionStates>
       <SelectionState runConfigName="reloj">
         <option name="selectionMode" value="DROPDOWN" />
-        <DropdownSelection timestamp="2026-06-12T21:10:59.269725600Z">
+        <DropdownSelection timestamp="2026-06-12T21:38:22.530235900Z">
           <Target type="DEFAULT_BOOT">
             <handle>
               <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\fluis_nuf\.android\avd\Pixel_6_2.avd" />

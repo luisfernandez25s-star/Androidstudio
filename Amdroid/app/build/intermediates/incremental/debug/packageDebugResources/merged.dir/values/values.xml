@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="racing_black">#121212</color>
+    <color name="racing_dark_grey">#1F1F1F</color>
+    <color name="racing_yellow">#FFCC00</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">AplicacionMovil</string>
+    <style name="Base.Theme.AplicacionMovil" parent="Theme.Material3.DayNight.NoActionBar">
+        
+        
+    </style>
+    <style name="Theme.AplicacionMovil" parent="Base.Theme.AplicacionMovil"/>
+</resources>
